@@ -1,0 +1,138 @@
+:root{
+    /*--portfolio-main-color : #0d3b66;
+    --portfolio-sub-one-color : #faf0ca;
+    --portfolio-sub-two-color : #f4d35e;
+    --portfolio-sub-three-color : #ee964b;
+    --portfolio-sub-four-color : #f95738;*/
+  }
+  
+  
+  /*
+  * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    */
+  
+  
+  
+  .project-title {
+    width: 100%;
+    min-height: 50px;
+    background-color: var(--portfolio-sub-one-color);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main_logo{
+    width: 15%;
+    margin: 10px 5px;
+  }
+  
+  .sub_title{
+    padding: 25px 20px 0px;
+    vertical-align: middle;
+    color: var(--portfolio-sub-two-color);
+  }
+  
+  .gallery_space {
+    width: 100%;
+    margin: 60px auto;
+  }
+  
+  .gallery {
+    width: 100%;
+    background: var(--portfolio-main-color);
+  }
+  
+  .gallery-cell {
+    width: 85%;
+    min-height: 700px;
+    margin: 5px 10px 10px 0px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+    box-shadow: 0px 0px 3px 0.1px gray;
+  }
+  
+  .bg1 {
+    background-image: url("../../img/suwon/bg1.png");
+    background-size: contain;
+    background-repeat: round;
+  }
+  
+  .bg2 {
+    background-image: url("../../img/suwon/bg2.png");
+    background-size: contain;
+    background-repeat: round;
+  }
+  
+  .bg3 {
+    background-image: url("../../img/suwon/bg3.png");
+    background-size: contain;
+    background-repeat: round;
+  }
+  
+  .bg4 {
+    background-image: url("../../img/suwon/bg4.png");
+    background-size: contain;
+    background-repeat: round;
+  }
+  
+  .bg5 {
+    background-image: url("../../img/suwon/bg5.png");
+    background-size: contain;
+    background-repeat: round;
+  }
+  
+  
+  
+  .project-description{
+    width: 100%;
+    background-color: var(--portfolio-main-color);
+    height: auto;
+  }
+  
+  .description_block{
+    width: 100%;
+    padding: 0 3%;
+  }
+  
+  .project-description h2{
+    margin-block-start: 0;
+    /* margin-block-end: 0; */
+  }
+  
+  .tech_block{
+    border: 1px solid var(--portfolio-sub-two-color);
+    color : var(--portfolio-sub-two-color);
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 32;
+    margin: 0 15px 0 0;
+  }
+  .bg1_desc{
+    display: none;
+  }
+  
+  .bg2_desc{
+    display: none;
+  }
+  
+  .gallery:has(.bg1.is-selected) .bg1_desc{
+    display: block;
+  }
+  .gallery:has(.bg2.is-selected) .bg2_desc{
+    display: block;
+  }
+  .gallery:has(.bg3.is-selected){
+    
+  }
+  .gallery:has(.bg4.is-selected){
+    
+  }
+  .gallery:has(.bg5.is-selected){
+    
+  }
+  

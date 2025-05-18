@@ -1,0 +1,249 @@
+:root{
+    --after-background-image-home: url('../img/home_white.png');
+    --after-background-image-profile: url('../img/profile_white.png');
+    --after-background-image-project: url('../img/project_white.png');
+    --portfolio-main-color : #0d3b66;
+    --portfolio-sub-one-color : #faf0ca;
+    --portfolio-sub-two-color : #f4d35e;
+    --portfolio-sub-three-color : #ee964b;
+    --portfolio-sub-four-color : #f95738;
+    /*--portfolio-main-color : #5c7dd2;
+    --portfolio-sub-one-color : #6587d9;
+    --portfolio-sub-two-color : #8dabe3;
+    --portfolio-sub-three-color : #9ebde3;
+    --portfolio-sub-four-color : #c9d2ee;
+    --portfolio-sub-five-color : #e4e5fb;*/
+    /*--portfolio-main-color : #f07167;
+    --portfolio-sub-one-color : #fed9b7;
+    --portfolio-sub-two-color : #fdfcdc;
+    --portfolio-sub-three-color : #ffe6a7;
+    --portfolio-sub-four-color : #99582a;*/
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: 'NanumSquareNeo-Variable';
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 30%;
+    bottom: 20px;
+    left: 35%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px 0.1px gray;
+    opacity: 0.1;
+    transition: opacity 0.3s ease-out;
+    z-index: 100;
+}
+
+/*
+nav{
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 5%;
+    top: 3%;
+    left: 1%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 2px 0.1px gray;
+    opacity: 0.1;
+}
+*/
+/*
+nav a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px 8px;
+    text-decoration: none;
+    font-size: small;
+    width: 80px;
+}
+*/
+nav:hover {
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+nav a {
+    content: "";
+    position: relative;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 8px;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    width: 80px;
+    border-radius: 20px;
+    transition: width 0.3s ease-out;
+}
+
+nav a:nth-child(1):after {
+    content: "";
+    display: inline-block;
+    background-image: var(--after-background-image-home);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: 25px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:nth-child(1):hover:after {
+    content: "";
+    display: inline-block;
+    background-image: url('../img/home_black.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:nth-child(2):after {
+    content: "";
+    display: inline-block;
+    background-image: var(--after-background-image-profile);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: 25px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:nth-child(2):hover:after {
+    content: "";
+    display: inline-block;
+    background-image: url('../img/profile_black.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:nth-child(3):after {
+    content: "";
+    display: inline-block;
+    background-image: var(--after-background-image-project);
+    background-size: cover;
+    width: 40px;
+    /* 이미지의 너비 */
+    height: 40px;
+    /* 이미지의 높이 */
+    position: absolute;
+    top: -2px;
+    left: 25px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:nth-child(3):hover:after {
+    content: "";
+    display: inline-block;
+    background-image: url('../img/project_black.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: 1px;
+    transition: left 0.3s ease-out;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+    width: 110px;
+    transition: width 0.3s ease-out;
+}
+
+nav a.active {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    background-color: var(--portfolio-main-color);
+    overflow-x: hidden;
+}
+
+.content {
+    width: 80%;
+    margin: 0px auto 10px;
+    background-color: var(--portfolio-sub-one-color);
+    min-height: 1000px;
+    padding: 20px 20px 0px;
+}
+
+.portfolio_content {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 800px;
+    background-color: var(--portfolio-sub-three-color);
+}
+
+.slogan {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slogan_hr {
+    width: 40%;
+    height: 2px;
+    background-color: #333;
+    margin: 50px 0px -15px;
+}
+
+.name_card {
+    width: 60%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+#name_table {
+    width: 50%;
+    margin-left: 75%;
+}
+
+#name_table td {
+    padding: 10px 20px;
+}

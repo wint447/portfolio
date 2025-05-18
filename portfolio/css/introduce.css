@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'Cafe24Shiningstar';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.self_introduce {
+    width: 100%;
+    min-height: 850px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0.1px var(--shadow--color);;
+    display: flex;
+    position: relative;
+    background-color: var(--portfolio-main-color);
+}
+
+.my_photo {
+    width: 28%;
+    min-height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0.1px var(--shadow--color);;
+    margin: 10px 5px 10px 10px;
+    background-color: var(--portfolio-sub-one-color);
+}
+
+/* 3D 카드 */
+.card {
+    width: 80%;
+    /* height: var(--card-height); */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  
+  .card:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 0.5;
+  }
+  
+  .card:hover .wrapper::after {
+    height: 120px;
+  }
+  .title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .character {
+    width: 80%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -15%, 100px);
+  }
+
+  .card:hover .cover-image {
+    opacity: 0;
+  }
+/* 3D 카드 끝 */
+
+#self_image {
+    width: 80%;
+    margin: 65px 30px -11px;
+    padding: 8px;
+    border-radius: 3px;
+}
+.introduce_overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #939393;
+    opacity: 0.5;
+    z-index: 5;
+    display: none;
+    /* display: block; */
+    position: absolute;
+    top: 0px;
+}
+.introduce_content {
+    width: 22%;
+    min-height: 23%;
+    margin: 0px auto;
+    padding: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 0.1px var(--shadow--color);
+    background-color: var(--portfolio-sub-three-color);
+    z-index: 10;
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    left: -70%;
+    bottom : 25%;
+    right: 0;
+    
+}
+
+.introduce_content:hover{
+    width: 96%;
+    position: absolute;
+    top: 3%;
+    bottom : 7%;
+    left: -18%;
+    right: -18%;
+}
+
+.introduce_content:hover .introduce_hover{
+    display: none;
+}
+.introduce_content:hover .introduce_overlay{
+    display: block;
+}
+
+.introduce_content:hover .introduce_text{
+    display: block;
+    width: 100%;
+    
+}
+
+.introduce_hover{
+    width: 100%;
+}
+.introduce_text{
+    width: 0%;
+    display: none;
+}
+
+.my_skill {
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0.1px var(--shadow--color);;
+    margin: 10px 10px 10px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--portfolio-sub-one-color);
+}
+
+.my_skill_item {
+    width: 45%;
+    margin: 10px;
+    padding: 0px 15px;
+    box-shadow: 0px 0px 3px 0.1px var(--shadow--color);;
+    /* border-radius: 5px; */
+    font-family: 'Cafe24Shiningstar';
+    display: inline-block;
+    position: relative;
+    background-color: var(--portfolio-sub-two-color);
+}
+
+/* 테두리 효과주기 */
+.my_skill_item span:nth-last-child(4) {
+    position: absolute;
+    border-top: 7px solid var(--portfolio-sub-four-color);
+    top: 0;
+    left: 0;
+    right: 100%;
+    transition: 0.1s;
+}
+
+.my_skill_item:hover span:nth-last-child(4) {
+    right: 0%;
+}
+
+.my_skill_item span:nth-last-child(3) {
+    position: absolute;
+    border-right: 7px solid var(--portfolio-sub-four-color);;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    transition: 0.1s;
+}
+
+.my_skill_item:hover span:nth-last-child(3) {
+    bottom: 0%;
+}
+
+.my_skill_item span:nth-last-child(2) {
+    position: absolute;
+    border-bottom: 7px solid var(--portfolio-sub-four-color);;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    transition: 0.1s;
+}
+
+.my_skill_item:hover span:nth-last-child(2) {
+    left: 0%;
+}
+
+.my_skill_item span:nth-last-child(1) {
+    position: absolute;
+    border-left: 7px solid var(--portfolio-sub-four-color);;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    transition: 0.1s;
+}
+
+.my_skill_item:hover span:nth-last-child(1) {
+    top: 0%;
+}
+
+/* 테두리 생성 제거 딜레이*/
+.my_skill_item span:nth-last-child(4) {
+    transition-delay: 0.3s
+}
+
+.my_skill_item:hover span:nth-last-child(4) {
+    transition-delay: 0s;
+}
+
+.my_skill_item span:nth-last-child(3) {
+    transition-delay: 0.2s;
+}
+
+.my_skill_item:hover span:nth-last-child(3) {
+    transition-delay: 0.1s;
+}
+
+.my_skill_item span:nth-last-child(2) {
+    transition-delay: 0.1s;
+}
+
+.my_skill_item:hover span:nth-last-child(2) {
+    transition-delay: 0.2s;
+}
+
+.my_skill_item span:nth-last-child(1) {
+    transition-delay: 0s;
+}
+
+.my_skill_item:hover span:nth-last-child(1) {
+    transition-delay: 0.3s;
+}
+
+
+.skill_table {
+    width: 95%;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.skill_table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 0.5px solid #939393;
+    color: var(--portfolio-main-one-color);
+}
